@@ -84,13 +84,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testRefreshingTwiceWithTheSameTokenIsUnauthorized
 
-**Symptôme** :
+**Symptôme** : On pouvoit voir les tickets sans token
 
-**Cause** :
+**Cause** : Oublie de verification si on est bien connecté
 
-**Règle du module en jeu** :
+**Règle du module en jeu** :  Si on oublie la de sécurisé nos routes des personnes peut voir des informations qui ne sont pas censé voir
 
-**Correctif** :
+**Correctif** : Rajout de la sécurité sur la route dans entity avec security: "is_granted('ROLE_USER')",
 
 ## testRemovingALineFromSomeoneElsesOrderIsForbidden
 

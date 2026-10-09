@@ -18,6 +18,7 @@ use Symfony\Component\Uid\Uuid;
         paginationClientEnabled: false,
         output: KitchenTicketListOutput::class,
         provider: KitchenTicketCollectionProvider::class,
+        security: "is_granted('ROLE_USER')",
     ),
 ])]
 #[ORM\Entity(repositoryClass: KitchenTicketRepository::class)]

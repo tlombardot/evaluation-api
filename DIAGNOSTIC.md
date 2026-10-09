@@ -54,13 +54,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testListingKitchenTicketsWithoutTokenIsUnauthorized
 
-**Symptôme** :
+**Symptôme** : Le Refresh Token ne se renouvelle pas quand utilisé
 
-**Cause** :
+**Cause** : Oublie de mettre single use sur le refresh token
 
-**Règle du module en jeu** :
+**Règle du module en jeu** :  Question de sécurité on peut générer autant de token avec un refresh token surtout qu'il lui expire plus longtemps que ferai un token de base.
 
-**Correctif** :
+**Correctif** : single_use: true
 
 ## testOpeningAnOrderIgnoresAnAbandonedOne
 

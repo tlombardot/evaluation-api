@@ -28,7 +28,7 @@ Une section par test en échec : renseignez ses quatre champs.
 
 **Cause** : Oubli de calculer le plat lors de la commande selon la quantité
 
-**Règle du module en jeu** :  Problème sur la véracité du prix, le plat peut etre commandé selon la quantité mais elle doit etre calculer dans le service le prix
+**Règle du module en jeu** :  Problème sur la véracité du prix, le plat peut etre commandé selon la quantité mais elle doit etre calculer dans le service
 
 **Correctif** : Rajout que la sortie subtotal de line mutiplié par la quantité
 
@@ -94,10 +94,10 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testRemovingALineFromSomeoneElsesOrderIsForbidden
 
-**Symptôme** :
+**Symptôme** : On peut supprimer une commande de quelqu'un d'autre alors que ce n'est pas ta commande
 
-**Cause** :
+**Cause** : On regarder que l'object était à lui ou sinon qu'il était connecté en tant que USER c'est pas bon
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : Le delete d'une ressource d'un autre utilisateur ne doit pas être possible par un autre utiliseur probleme de sécutité
 
-**Correctif** :
+**Correctif** : Enlever la verification sécurité que l'utilisateur à le role USER mais on garde bien la verfication que la ressource est bien à lui ou plutot crée par cette utilisateur.

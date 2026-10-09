@@ -14,13 +14,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineToAPaidOrderIsAConflict
 
-**Symptôme** :
+**Symptôme** : Meme quand le la commande est deja payé on peut toujours mettre un plat dedans
 
-**Cause** :
+**Cause** : Oublie de mettre une verification si la commande est déjà payé dans le service
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : Probleme d'exceptions la ressource est crée alors que la commande est deja payé
 
-**Correctif** :
+**Correctif** : Rajouter la verification du status de la commande pour savoir si elle est payé avant de rajouter un plat dessus
 
 ## testAddingALineToMyOrder
 

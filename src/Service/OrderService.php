@@ -114,8 +114,12 @@ class OrderService
      */
     public function addLine(Order $order, OrderAddLineInput $input): Order
     {
+        if ($order->getStatus() === OrderStatus::Paid){
+            throw new OrderAlreadyPaidException;
+        }
         // résoudre un plat appartient au domaine des plats : ce service passe par le sien
         $dish = $this->dishService->findOneById(Uuid::fromString($input->dishId));
+
 
         // une commande se retire dans un seul restaurant : le plat doit venir de celui des lignes
         // vivantes

@@ -74,13 +74,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testPayingMyOrderMarksItPaid
 
-**Symptôme** :
+**Symptôme** : Quand on paye une commande ça ne le marque pas payé
 
-**Cause** :
+**Cause** : Oublie de la mise à jour des transactions SQL
 
-**Règle du module en jeu** :
+**Règle du module en jeu** :  Si on oublie un flush les transactions SQL persiste sont mémorisé mais jamais mis à execution donc la base de donnée se met pas à jour avec le correctif
 
-**Correctif** :
+**Correctif** : Rajout du flush dans le service de order sur la methode pay
 
 ## testRefreshingTwiceWithTheSameTokenIsUnauthorized
 

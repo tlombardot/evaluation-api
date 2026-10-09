@@ -214,6 +214,8 @@ class OrderService
         // ni une création ni une suppression : une mise à jour, estampillée comme telle
         $this->audit->stampUpdate($order);
 
+        $this->orderRepository->flush();
+
         return $kitchenTickets;
     }
 

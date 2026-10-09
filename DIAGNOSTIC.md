@@ -60,7 +60,7 @@ Une section par test en échec : renseignez ses quatre champs.
 
 **Règle du module en jeu** :  Question de sécurité on peut générer autant de token avec un refresh token surtout qu'il lui expire plus longtemps que ferai un token de base.
 
-**Correctif** : single_use: true
+**Correctif** : single_use: true dans le package config gesdinet
 
 ## testOpeningAnOrderIgnoresAnAbandonedOne
 

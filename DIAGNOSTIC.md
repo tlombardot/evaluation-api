@@ -44,13 +44,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testListingKitchenTicketsReturnsMine
 
-**Symptôme** :
+**Symptôme** : La liste ne retourner pas que le sien mais celui de bob aussi
 
-**Cause** :
+**Cause** : Oubli de spécifié qu'on que ce qui a appartient à l'utilisateur
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : Tout les tickets sont retourner mais l'utilisateur n'est pas censé le voir il faut spécifier pour la sécurité qu'on cherche que celui de l'utilisateur c'est aussi pour ça qu'on met en place des createdBy
 
-**Correctif** :
+**Correctif** : Dans le repository de KitchenTicket rajout d'un where pour spécifier qu'on que celui de l'utilisateur
 
 ## testListingKitchenTicketsWithoutTokenIsUnauthorized
 
@@ -64,7 +64,7 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testOpeningAnOrderIgnoresAnAbandonedOne
 
-**Symptôme** :
+**Symptôme** : 
 
 **Cause** :
 

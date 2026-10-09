@@ -48,6 +48,7 @@ use Symfony\Component\Uid\Uuid;
         requirements: ['id' => Requirement::UUID],
         input: OrderAddLineInput::class,
         output: OrderDetailsOutput::class,
+        provider: OrderProvider::class,
         processor: OrderAddLineProcessor::class,
         security: "object.getCreatedBy() == user",
     ),

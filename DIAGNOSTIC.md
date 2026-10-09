@@ -4,13 +4,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineToAnUnknownOrderIsNotFound
 
-**Symptôme** :
+**Symptôme** : Au lieu de recevoir un 404 on reçoit un 500
 
-**Cause** :
+**Cause** : Le manque de provider
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : On essaye de savoir si l'object qu'on ajoute a été fait par l'utilisateur avec le security mais si il y'a pas de provider impossible de savoir ou plutot symfony va le faire lui même et defois ça marche il arrive a trouvé defois non comme ce cas là donc c'est mieux de mettre notre propre provider.
 
-**Correctif** :
+**Correctif** : Rajouter un provider pour qu'il puisse récuperer la ressource de l'object pour la security
 
 ## testAddingALineToAPaidOrderIsAConflict
 

@@ -1,0 +1,22 @@
+api_platform:
+    title: CodaEats
+    version: 1.0.0
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
+        normalization_context:
+            skip_null_values: false
+    formats:
+        json: ['application/json']
+    docs_formats:
+        jsonopenapi: ['application/vnd.openapi+json']
+        html: ['text/html']
+    error_formats:
+        jsonproblem: ['application/problem+json']
+    swagger:
+        http_auth:
+            bearerAuth:
+                scheme: bearer
+                bearerFormat: JWT
+        persist_authorization: true

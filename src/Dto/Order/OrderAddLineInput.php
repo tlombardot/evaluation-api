@@ -18,7 +18,7 @@ final class OrderAddLineInput
         public string $dishId,
 
         #[Assert\NotBlank]
-        #[Assert\PositiveOrZero]
+        #[Assert\Positive]
         #[ApiProperty(schema: [
             'type' => 'integer',
             'description' => 'Nombre de portions du plat.',

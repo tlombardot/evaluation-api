@@ -34,13 +34,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineWithAZeroQuantityIsUnprocessable
 
-**Symptôme** :
+**Symptôme** : On peut ajouter zero quantité a un plat
 
-**Cause** :
+**Cause** : La verification de surface laisse passer le zero quantité ou positive
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : Le prix va etre calculé sur 0 et peut poser des problèmes à l'insertion du plat
 
-**Correctif** :
+**Correctif** : dans le dto input changement de l'assert pour la quantité de postive or zero à postive
 
 ## testListingKitchenTicketsReturnsMine
 

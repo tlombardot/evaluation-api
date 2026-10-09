@@ -41,7 +41,7 @@ class OrderService
             dish: $this->dishService->toList($dish),
             quantity: $line->getQuantity(),
             // le sous-total ne vient d'aucune colonne : il se recalcule à chaque lecture
-            subtotal: $dish->getPrice(),
+            subtotal: $dish->getPrice() * $line->getQuantity(),
         );
     }
 

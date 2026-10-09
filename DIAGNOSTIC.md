@@ -24,13 +24,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineToMyOrder
 
-**Symptôme** :
+**Symptôme** : Le total qu'on devrait recevoir en prix n'était pas le bon
 
-**Cause** :
+**Cause** : Oubli de calculer le plat lors de la commande selon la quantité
 
-**Règle du module en jeu** :
+**Règle du module en jeu** :  Problème sur la véracité du prix, le plat peut etre commandé selon la quantité mais elle doit etre calculer dans le service le prix
 
-**Correctif** :
+**Correctif** : Rajout que la sortie subtotal de line mutiplié par la quantité
 
 ## testAddingALineWithAZeroQuantityIsUnprocessable
 
